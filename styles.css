@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 540px;
+    background-color: orange;
+    padding-top: 20px;
+    overflow: hidden;
+
+}
+.wrapper{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: space-between;
+    transition: transform 1s ease;
+}
+
+.card {
+    width: 280px;
+    height: 450px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tag{
+    position: absolute;
+    top: 20px;
+    background-color: orange;
+    width: 100px;
+    text-align: center;
+    transform: rotate(-45deg);
+    left: -20px;
+    font-weight: bold;
+}
+
+
+.card-title {
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(239, 250, 255);
+    padding: 10px;
+}
+
+.inner-card h2:first-child {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.inner-card-wrapper {
+    display: flex;
+    position: relative;
+    margin-top: 5px;
+}
+
+.inner-card-wrapper h1:first-child {
+    margin: 0;
+    font-size: 1rem;
+    position: absolute;
+    left: -10px;
+}
+
+.inner-card-wrapper h1:last-child {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.statutory-fees {
+    font-size: 0.7rem;
+    color: rgb(25, 25, 255);
+}
+
+.description {
+    font-size: 0.7rem;
+    margin-top: 10px;
+}
+
+.inner-card-bottom {
+    position: absolute;
+    font-size: 0.8rem;
+    bottom: 30px;
+    color: rgb(19, 62, 255);
+}
+
+
+.scroll-buttons-wrapper{
+    position: absolute;
+    bottom: 5px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+    }
+}
